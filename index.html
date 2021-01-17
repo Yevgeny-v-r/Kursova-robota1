@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Основы Vue</title>
+    <link rel="stylesheet" href="theme.css" />
+  </head>
+  <body>
+
+  <div class="container" id="app">
+    <div class="card">
+      <h1>План по изучению Vue.js</h1>
+
+      <div class="steps">
+        <div class="steps-content">
+          <!-- Сюда необходимо вывести текст активного шага по его индексу -->
+          <p >{{ text1 }}</p>
+          <!-- <p v-on:click>{{ text2 }}</p> -->
+          <!-- <p>{{ text3 }}</p> -->
+          <!-- <p>{{ text4 }}</p> -->
+          <!-- <p>{{ text5 }}</p> -->
+        </div>
+        <ul class="steps-list">
+          <li class="steps-item done" ><span>1</span> {{ title1 }}</li>
+          <li class="steps-item done" v-on:click="nextOfFinish"><span>2</span> {{ title2 }}</li>
+          <li class="steps-item active"><span>3</span> {{ title3 }}</li>
+          <li class="steps-item"><span>4</span> {{ title4 }}</li>
+          <li class="steps-item"><span>4</span> {{ title5 }}</li>
+        </ul>
+        <div>
+          <button class="btn">Назад</button>
+          <button class="btn primary">Вперед</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/vue@next"></script>
+  <script src="vue.js"></script>
+  </body>
+</html>
